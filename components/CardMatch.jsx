@@ -1,6 +1,5 @@
 import  {IoMdTrophy } from "react-icons/io"
-import {SpecialButton} from "../index"
-import Link from "next/Link";
+import {SpecialButton} from "./index"
 import Image from "next/image";
 function CardMatch({match}) {
 
@@ -8,12 +7,12 @@ function CardMatch({match}) {
 
   return (
     <>
-    <Link href={`/matches/${slug}`} className="  cursor-pointer group" key={title}>
+    <a href={`/matches/${slug}`} className="cursor-pointer group" key={title}>
       <div className="card bg-gray-1000  mb-3 shadow relative rounded-lg  border border-gray-200">
-         <div className="card-body py-4 px-4 relative">
+         <div className="card-body py-4 px-2 relative">
             <div className="row grid grid-cols-3">
                   <div className="flex flex-col justify-center items-center">
-                        <div className=" mb-1 h-10 w-10 md:w-16 md:h-16 relative">
+                        <div className="mb-1 h-10 w-10 md:w-16 md:h-16 relative">
                             <Image 
                             className="rounded-full"  
                             rel='preload'
@@ -23,9 +22,9 @@ function CardMatch({match}) {
                             fill  
                             alt={teamOne}  />
                        </div>
-                       <span className={` font-bold text-sm md:text-xl`}> {teamOne} </span>
+                       <span className={`font-bold text-xs md:text-xl`}>{teamOne}</span>
                   </div>
-                   <div className="flex flex-col justify-between	items-center my-auto">
+                   <div className="flex flex-col justify-between items-center my-auto">
                         <SpecialButton
                             start={start} 
                             finish={finish} 
@@ -49,12 +48,12 @@ function CardMatch({match}) {
                             fill  
                             alt={teamTwo}  />
                        </div>
-                       <span className="font-bold text-sm md:text-xl"> {teamTwo} </span>
+                       <span className="font-bold text-xs md:text-xl"> {teamTwo} </span>
                 </div>
             </div>
          </div>
       </div>
-    </Link>
+    </a>
     </>
     
   )

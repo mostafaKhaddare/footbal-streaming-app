@@ -6,10 +6,10 @@ function today({matches}) {
     <>
      <NextSeo 
        title="مباريات اليوم"
-       canonical="www.beinfoot.live/today"
+       canonical="https://www.mostafatv.com/today"
        openGraph={
         {
-          url :"www.beinfoot.live/today"
+          url :"https://www.mostafatv.com/today"
         }
        }
        />

@@ -1,5 +1,5 @@
 import Link from "next/link"
-import {SpecialButton} from "../index"
+import {SpecialButton} from "./index"
 import Image from "next/image"
 
 function CardMatchTwo({match , mySlug}) {
@@ -9,7 +9,7 @@ function CardMatchTwo({match , mySlug}) {
     <>
      <div className="card shadow  bg-white p-2  ">
           <Link href={!mySlug ? '/' : `/matches/${slug}` } key={title} className="group ">
-              <div className="card-body py-4 px-4 bg-gray-200 rounded-lg relative  ">
+              <div className="card-body py-4 px-2  bg-gray-200 rounded-lg relative  ">
                   <div className="row grid grid-cols-3  ">
                           <div className="flex flex-col justify-center items-center">
                                <div className=" mb-1 h-10 w-10   md:w-16 md:h-16 relative">

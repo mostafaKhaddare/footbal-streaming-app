@@ -7,12 +7,19 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function contact() {
-  const notify = () => toast.success("لقد تم ارسال رسالتك بنجاح" , {autoClose: 1000,});
+
+  const websiteName = process.env.WEBSITE_NAME
+  const websiteUrl = process.env.WEBSITE_URL
+
+  const notify = () => toast.success("لقد تم ارسال رسالتك بنجاح" , {autoClose: 1000});
+
   const onSubmit = async (values , actions)=>{
     await sendContactForm(values)
     notify()
     actions.resetForm()
   }
+
+
 
    const {values , handleChange , handleSubmit , errors ,touched, handleBlur , isSubmitting} = useFormik({
     initialValues : {
@@ -27,10 +34,10 @@ function contact() {
     <>
      <NextSeo 
        title="contact us"
-       canonical="www.beinfoot.live/contact"
+       canonical="https://www.mostafatv.com/contact"
        openGraph={
         {
-          url :"www.beinfoot.live/contact"
+          url :"https://www.mostafatv.com/contact"
         }
        }
        />

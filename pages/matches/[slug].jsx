@@ -6,14 +6,16 @@ import { NextSeo } from 'next-seo'
 function MatchDetails({post}) {
   const {teamOne , teamTwo , league , linkOne} = post
   
+
+  
   return (
     <>
      <NextSeo 
        title={`مشاهدة مباراة فريق ${teamOne} ${teamTwo} ${league} بمواجهة فريق المغرب الفاسي برسم البطولة المغربية الإحترافية`}
-       canonical={"www.beinfoot.live/" + post.slug}
+       canonical={ 'https://www.mostafatv.com' + post.slug}
        openGraph={
         {
-          url :"www.beinfoot.live/" + post.slug
+          url : "https://www.mostafatv.com" + post.slug
         }
        }
        />
@@ -26,9 +28,9 @@ function MatchDetails({post}) {
  export default MatchDetails
 
  export async function getStaticProps({params}){
-  const data = await getPostDetails(params.slug)
+  const post = await getPostDetails(params.slug)
   return{
-    props : { post : data}
+    props : { post}
   }
  }
 

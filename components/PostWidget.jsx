@@ -1,7 +1,7 @@
 import {useState , useEffect } from "react"
-import {FollowUs} from "../index"
-import { getTomorrowMatches , getRelatedMatches} from "../../services"
-import {CardMatchTwo , Title , CardSkelton} from "../index"
+import {FollowUs} from "./index"
+import { getTomorrowMatches , getRelatedMatches} from "../services"
+import {CardMatchTwo , Title , CardSkelton} from "./index"
 import moment from "moment"
 
 const tomorrow = moment().add(1 , 'days').format("YYYY-MM-DD")
@@ -29,12 +29,19 @@ function PostWidget({slug}) {
     <>
          <FollowUs/>
          <Title title={slug ? "مباريات اليوم"  : 'مباريات الغد'} date={slug ? today  : tomorrow }/>
-            <div className="mb-8">
-               
-               {loading ? relatedMatches.map((match)=>(
-                 <CardMatchTwo key={match.id} match={match} mySlug={slug}/>
-                   )) : <> <CardSkelton cardNumber={5}/></>
-                }
+            <div className="mb-8 p-4 bg-slate-50">
+        {loading ? (
+          relatedMatches.length > 0 ? (
+            relatedMatches.map((match) => (
+              <CardMatchTwo key={match.id} match={match} mySlug={slug} />
+            ))
+          ) : (
+            <div className="text-xl md:text-2x">No matches found</div>
+          )
+        ) : (
+          <CardSkelton cardNumber={5}/>
+        )}
+                
              </div>
     </>
   )

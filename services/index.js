@@ -103,7 +103,7 @@ export const getTomorrowMatches = async()=>{
 }
 
 
-// YESTERDAY RELATED MATCHES
+// YESTERDAY detail MATCHES
 export const getRelatedMatches = async(slug)=>{
   const QUERY = gql`
   query GetPostDetails($slug : String! ){

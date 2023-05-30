@@ -31,7 +31,7 @@ function SpecialButton({start , finish , resault ,textWhenStart , bgColorWhenSta
 
   return (
     <>
-        <span className= {`${myClass} text-center w-28 md:w-32 bg-first-color px-2 py-1 rounded-lg text-white mb-3 sm:text-base md:text-xl`}>
+        <span className= {`${myClass} text-center w-24 md:w-32 bg-first-color px-2 py-1 rounded-lg text-white mb-3 text-sm md:text-xl`}>
               <BiTime className={`${hide}  inline  text-white ml-2 md:text-lg mb-1` }/>
               {text}
         </span>

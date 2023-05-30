@@ -1,4 +1,4 @@
-import Image1 from "../../public/img2.jpg"
+import Image1 from ".././public/img1.jpg"
 import Image from "next/image"
 
 function PageDetails({post}) {

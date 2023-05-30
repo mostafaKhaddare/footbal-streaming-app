@@ -1,18 +1,19 @@
+
 export const SEO = {
       title:'موقع النقل المباشر الأول عربيا',
       description:"روابط النقل المباشر للمباريات بجودة عالية ومصادر متنوعة ودون انقطاع",
-      useAppDir :true,
+      useAppDir :false,
       themeColor  : "0075ff" ,
-      titleTemplate : "Bein Foot - %s ",
-      canonical:'https://beinfoot.live',
-      defaultTitle : "beinfoot - موقع النقل المباشر الأول عربيا'",
+      titleTemplate : ` mostafatv - %s `,
+      canonical: "https://www.mostafatv.com",
+      defaultTitle : ' mostafatv - موقع النقل المباشر الأول عربيا ',
       openGraph:{
           type : "website",
           locale : "ar_MA",
-          siteName : "bein foot",
-          url : "https://beinfoot.live",
+          siteName : "mostafatv",
+          url : "https://www.mostafatv.com",
           images : {
-            url: 'https://beinmatch.biz/poster.jpg',
+            url: "https://www.mostafatv.com/poster.jpg",
             width: 850,
             height: 650,
             alt: 'Photo of text',
@@ -26,7 +27,7 @@ export const SEO = {
       additionalMetaTags :[
        {
         name: 'application-name',
-        content: 'beinfoot'
+        content: "mostafatv"
       }, 
       {
         httpEquiv: 'x-ua-compatible',
@@ -37,29 +38,29 @@ export const SEO = {
       additionalLinkTags :[
         {
           rel: 'icon',
-          href: 'https://beinmatch.biz/favicon-32x32.png',
+          href: '/favicon-16x16.png',
         },
         {
             rel: 'icon',
-            href: 'https://beinmatch.biz/favicon-96x96.png',
+            href: '/favicon-32x32.png',
         },
         {
             rel: 'icon',
-            href: 'https://beinmatch.biz/favicon-192x192.png',
+            href: '/favicon-192x192.png',
         },
         {
             rel: 'icon',
-            href: 'https://beinmatch.biz/favicon-x16.png',
+            href: '/favicon.ico',
         },
         {
           rel: 'apple-touch-icon',
-          href: 'https://www.test.ie/touch-icon-ipad.jpg',
-          sizes: '76x76'
+          href: '/apple-touch-icon.png"',
+          sizes: '180x180'
         },
-        // {
-        //   rel: 'manifest',
-        //   href: '/manifest.json'
-        // },
+        {
+          rel: 'manifest',
+          href: '/site.webmanifest'
+        },
         {
           rel: 'preload',
           href: 'https://www.test.ie/font/sample-font.woof2',

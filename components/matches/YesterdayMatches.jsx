@@ -22,10 +22,18 @@ function YesterdayMatches({matches}) {
     <>
     <div className="m-yesterday md:mb-8 text-xl md:text-2xl">
       <Title title={" أهداف وملخصات مباريات أمس "} date={yesterday}/>
-       <div className="p-4 bg-slate-50">
-            { loading ? YesterdayMatches.map((match)=> (
-                <CardMatch key={match.id} match={match} />)  
-            ) : <CardSkeltonTwo cardNumber={5}/>}
+      <div className="p-4 bg-slate-50">
+        {loading ? (
+          YesterdayMatches.length > 0 ? (
+            YesterdayMatches.map((match) => (
+              <CardMatch key={match.id} match={match} />
+            ))
+          ) : (
+            <div>No matches found</div>
+          )
+        ) : (
+          <CardSkeltonTwo cardNumber={5}/>
+        )}
       </div>
     </div>
     </>

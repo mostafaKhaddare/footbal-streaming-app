@@ -1,6 +1,5 @@
 import {useState} from "react";
-import { NavList } from "../index";
-import Link from "next/Link";
+import { NavList } from "./index";
 import {RxHamburgerMenu} from "react-icons/rx"
 import {MdOutlineClose} from "react-icons/md"
 import { useRouter } from 'next/router';
@@ -54,16 +53,15 @@ function Navbar() {
   return (
     <>
     <nav className={`${cairo.className} bg-stone-800  fixed top-0 right-0 left-0 z-50 py-3 `}>
-      <div className="container flex justify-between justify-items-center px-10 md:px-[4rem]  ">
-
+      <div className="container flex justify-between justify-items-center px-2 md:px-[4rem]  ">
         {/* logo */}
         <div className="logo">
-         <Link href={"/"}>
+         <a href={"/"}>
           <h1 className="text-3xl text-white font-bold"> be<span className="text-first-color">in</span>foot </h1>
-         </Link> 
+         </a> 
         </div>
          {/* menue */}
-         <ul className="hidden md:nav-links">
+         <ul className="hidden lg:nav-links">
          {navigations.map((item)=>(
           <NavList 
           key={item.id} 
@@ -73,13 +71,13 @@ function Navbar() {
         </ul>
 
          {/* burger */}
-        <div className="burger md:hidden">
+        <div className="burger lg:hidden">
            <RxHamburgerMenu className={`${isActive ? "hidden" : "text-white text-3xl" }`} onClick={toggleClass} />
            <MdOutlineClose className={`${isActive ? "text-first-color text-3xl" : "hidden" }`} onClick={toggleClass}/>
         </div>
         
         {/* collapse menue */}
-        <ul className={`${isActive ? 'translate-x-[0]' : 'translate-x-[-100%]'} md:hidden flex bg-stone-800 absolute top-[99%] left-0 h-screen flex-col justify-start w-2/4 items-center text-white	z-50 ease-in duration-300 py-12`}>
+        <ul className={`${isActive ? 'translate-x-[0]' : 'translate-x-[-100%]'} lg:hidden flex bg-stone-800 absolute top-[99%] left-0 h-screen flex-col justify-start w-2/4 items-center text-white	z-50 ease-in duration-300 py-12`}>
          {navigations.map((item)=>(
           <NavList 
           key={item.id} 

@@ -1,4 +1,4 @@
-import {Title} from '../index'
+import {Title} from './index'
 
 function Licence({title , eng , arb , fr}) {
   return (
